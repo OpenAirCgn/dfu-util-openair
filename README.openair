@@ -1,0 +1,8 @@
+# Changes for OpenAir
+
+This patched version of dfu-util handles a timeout condition 
+in the ERASE_PAGE command on STM32L43x devices. Basically,
+the timeout as reported is to short and needs to be increased.
+
+see:
+https://sourceforge.net/p/dfu-util/tickets/40

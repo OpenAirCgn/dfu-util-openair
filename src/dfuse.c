@@ -244,6 +244,9 @@ int dfuse_special_command(struct dfu_if *dif, unsigned int address,
 				dst.bwPollTimeout = 35000;
 				printf("Setting timeout to 35 seconds\n");
 			}
+			if (command == ERASE_PAGE && dst.bwPollTimeout == 10) {	//patch MK
+				dst.bwPollTimeout = 30;
+			}
 		}
 		/* wait while command is executed */
 		if (verbose)
